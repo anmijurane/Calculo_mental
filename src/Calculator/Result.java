@@ -33,7 +33,7 @@ public class Result extends javax.swing.JFrame {
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setText("Resultados ");
+        jLabel1.setText("Resultados");
 
         jLabel2.setText("Respuestas buenas:");
 
@@ -47,25 +47,26 @@ public class Result extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(152, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(137, 137, 137))
             .addGroup(layout.createSequentialGroup()
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(179, 179, 179)
+                        .addGap(127, 127, 127)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Resp_buenas)
-                            .addComponent(jLabel1)
-                            .addComponent(Resp_malas))))
-                .addContainerGap(175, Short.MAX_VALUE))
+                            .addComponent(Resp_malas)))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(jLabel1)
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -75,7 +76,7 @@ public class Result extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(Resp_malas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
@@ -126,39 +127,12 @@ public class Result extends javax.swing.JFrame {
         Processo.ArrResultExt.add((int)random.getRandom(0,5));
         Processo.ArrResultExt.add((int)random.getRandom(0,5));
     }*/
-    
+
     public static void setResult_ext(int Correct, int Incorrect){  
 
         Resp_buenas.setText(""+Correct);
         Resp_malas.setText(""+Incorrect);
-        //Prueba
-        
-        
-        //Branch Array
-        
-        /*int a = Calculator.Processo.contCorrect;
-        System.out.println("Correctas: " +a);
-        Resp_buenas.setText(""+a);
-        
-        int b = Calculator.Processo.contIncorrect;
-        System.out.println("Incorrectas: " +b);
-        Resp_malas.setText(""+b);*/        
-
-        
-  /*          //System.out.println("dato del arreglo"+Processo.ArrResultExt.get(i));
-            RU_01.setText(""+Processo.ArrResultExt.get(0));
-            RU_02.setText(""+Processo.ArrResultExt.get(1));
-            RU_03.setText(""+Processo.ArrResultExt.get(2));
-            RU_04.setText(""+Processo.ArrResultExt.get(3));
-            RU_05.setText(""+Processo.ArrResultExt.get(4));
-            RU_06.setText(""+Processo.ArrResultExt.get(5));
-            RU_07.setText(""+Processo.ArrResultExt.get(6));
-            RU_08.setText(""+Processo.ArrResultExt.get(7));
-            RU_09.setText(""+Processo.ArrResultExt.get(8));
-            RU_10.setText(""+Processo.ArrResultExt.get(9));
-                    */
-       // System.out.println("Arreglo String"+Processo.ArrResultExt.toString());
-       // System.out.println("Tamaño del arreeglo"+Processo.ArrResultExt.size());
+     
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

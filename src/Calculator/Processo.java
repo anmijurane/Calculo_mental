@@ -32,7 +32,7 @@ public class Processo extends javax.swing.JFrame {
     public static int contCorrect = 0;
     public static int contIncorrect = 0;
     static int resultInt;
-    static int contador = 0;
+    static int contador = 1;
     static Result dl = new Result();
     //Arreglos
     static ArrayList<Integer> ArrRight = new ArrayList<Integer>();
@@ -60,30 +60,40 @@ public class Processo extends javax.swing.JFrame {
         result_kid = new javax.swing.JTextField();
         Btn_enviar = new javax.swing.JButton();
         Siguiente = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        label_numer = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jTree1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Resuelve la siguiente operación:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
 
         FirstValue.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         FirstValue.setText("0");
+        getContentPane().add(FirstValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 25, 31));
 
         Operator.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         Operator.setText("+/-");
+        getContentPane().add(Operator, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 25, 31));
 
         SecondValue.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         SecondValue.setText("0");
+        getContentPane().add(SecondValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 25, 31));
 
         equals.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         equals.setText("=");
+        getContentPane().add(equals, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 20, 31));
 
         result_kid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 result_kidActionPerformed(evt);
             }
         });
+        getContentPane().add(result_kid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 106, -1));
 
         Btn_enviar.setText("Verificar y Siguiente");
         Btn_enviar.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +101,7 @@ public class Processo extends javax.swing.JFrame {
                 Btn_enviarActionPerformed(evt);
             }
         });
+        getContentPane().add(Btn_enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, -1, -1));
 
         Siguiente.setText("Resúestas");
         Siguiente.addActionListener(new java.awt.event.ActionListener() {
@@ -98,53 +109,14 @@ public class Processo extends javax.swing.JFrame {
                 SiguienteActionPerformed(evt);
             }
         });
+        getContentPane().add(Siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 190));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(FirstValue, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Operator, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(SecondValue, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Siguiente))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(result_kid, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Btn_enviar)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jLabel1)))
-                .addContainerGap(29, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1)
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(FirstValue, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Operator, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SecondValue, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(equals, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(result_kid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Siguiente)
-                    .addComponent(Btn_enviar))
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
+        label_numer.setText("1 / 10");
+        getContentPane().add(label_numer, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, -1));
+
+        jLabel4.setText("Operación: ");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -160,6 +132,7 @@ public class Processo extends javax.swing.JFrame {
         Operation();
         result_kid.setText("");
         result_kid.requestFocus();
+        contador++;
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Ingresa un número.");
         }        
@@ -168,10 +141,11 @@ public class Processo extends javax.swing.JFrame {
         //this.show();
         //this.dispose();  
                 
-        contador++;
+        
+        label_numer.setText(""+(contador)+" / 10");
         System.out.println("contador " +contador);
         
-        if (contador == 10) {
+        if (contador == 11) {
             dl.show();
             this.dispose();
         }
@@ -182,10 +156,10 @@ public class Processo extends javax.swing.JFrame {
         resultInt = Integer.parseInt(kid_result);
         ArrResultExt.add(resultInt);
         if (result == resultInt) {
-            JOptionPane.showMessageDialog(null, "Correcto");            
+            //JOptionPane.showMessageDialog(null, "Correcto");            
             contCorrect++;
         }else if (result != resultInt){
-            JOptionPane.showMessageDialog(null, "Incorrecto");
+            //JOptionPane.showMessageDialog(null, "Incorrecto");
             contIncorrect++;
             //System.out.println("correcto: " +contIncorrect);
         }        
@@ -196,10 +170,10 @@ public class Processo extends javax.swing.JFrame {
         //System.out.println("Ya no hay mas operaciones");
     }
            
-    public int SendData(){
-        int datosa = contCorrect;                                
-        return datosa;
-    }
+//    public int SendData(){
+//        int datosa = contCorrect;                                
+//        return datosa;
+//    }
     
     private void SiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SiguienteActionPerformed
         /*        
@@ -286,8 +260,11 @@ public class Processo extends javax.swing.JFrame {
     private javax.swing.JButton Siguiente;
     private javax.swing.JLabel equals;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;
+    private javax.swing.JLabel label_numer;
     private javax.swing.JTextField result_kid;
     // End of variables declaration//GEN-END:variables
 }
