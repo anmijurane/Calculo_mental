@@ -32,7 +32,7 @@ public class Processo extends javax.swing.JFrame {
     public static int contCorrect = 0;
     public static int contIncorrect = 0;
     static int resultInt;
-    static int contador = 1;
+    static int contador = 0;
     static Result dl = new Result();
     //Arreglos
     static ArrayList<Integer> ArrRight = new ArrayList<Integer>();
@@ -189,12 +189,16 @@ public class Processo extends javax.swing.JFrame {
             contIncorrect++;
             //System.out.println("correcto: " +contIncorrect);
         }        
-        
-        Result set = new Result();
-        set.setResult_ext(contCorrect, contIncorrect);
+                                
+        Result.setResult_ext(contCorrect, contIncorrect);
         
         //System.out.println(""+a);
         //System.out.println("Ya no hay mas operaciones");
+    }
+           
+    public int SendData(){
+        int datosa = contCorrect;                                
+        return datosa;
     }
     
     private void SiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SiguienteActionPerformed

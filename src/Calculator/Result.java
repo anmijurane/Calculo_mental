@@ -127,7 +127,7 @@ public class Result extends javax.swing.JFrame {
         Processo.ArrResultExt.add((int)random.getRandom(0,5));
     }*/
     
-    public void setResult_ext(int Correct, int Incorrect){  
+    public static void setResult_ext(int Correct, int Incorrect){  
 
         Resp_buenas.setText(""+Correct);
         Resp_malas.setText(""+Incorrect);
@@ -162,8 +162,8 @@ public class Result extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Resp_buenas;
-    private javax.swing.JLabel Resp_malas;
+    private static javax.swing.JLabel Resp_buenas;
+    private static javax.swing.JLabel Resp_malas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
