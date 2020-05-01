@@ -9,7 +9,8 @@ import javax.swing.JOptionPane;
  */
 public class Processo extends javax.swing.JFrame {
 
-    random acc = new random();   
+    random acc = new random();
+    static String Name_kid;
         
     /**
      * Creates new form Processo
@@ -20,8 +21,17 @@ public class Processo extends javax.swing.JFrame {
         GetNumberRigth();
         GetNumberLeft();
         getOperator();
+        Operation();        
+    }
+    
+    public Processo(String Name_Kid){
+        initComponents();  
+        //successes();
+        GetNumberRigth();
+        GetNumberLeft();
+        getOperator();
         Operation();
-        
+        this.Name_kid = Name_Kid;
     }
     
     
@@ -60,6 +70,7 @@ public class Processo extends javax.swing.JFrame {
         result_kid = new javax.swing.JTextField();
         Btn_enviar = new javax.swing.JButton();
         Siguiente = new javax.swing.JButton();
+        Etq_Name_kid = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         label_numer = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -93,7 +104,7 @@ public class Processo extends javax.swing.JFrame {
                 result_kidActionPerformed(evt);
             }
         });
-        getContentPane().add(result_kid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 106, -1));
+        getContentPane().add(result_kid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 106, -1));
 
         Btn_enviar.setText("Verificar y Siguiente");
         Btn_enviar.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +121,9 @@ public class Processo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
+
+        Etq_Name_kid.setText("NOMBRE");
+        getContentPane().add(Etq_Name_kid, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 100, -1));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 190));
 
         label_numer.setText("1 / 10");
@@ -130,6 +144,7 @@ public class Processo extends javax.swing.JFrame {
         GetNumberLeft();
         getOperator();
         Operation();
+        Etq_Name_kid.setText(Name_kid.toUpperCase());
         result_kid.setText("");
         result_kid.requestFocus();
         contador++;
@@ -254,6 +269,7 @@ public class Processo extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_enviar;
+    private javax.swing.JLabel Etq_Name_kid;
     private javax.swing.JLabel FirstValue;
     private javax.swing.JLabel Operator;
     private javax.swing.JLabel SecondValue;

@@ -124,7 +124,7 @@ public class index extends javax.swing.JFrame {
         if(txt_name.getText().equals("") || txt_name.getText().equals(" ") ){
             JOptionPane.showMessageDialog(null, "Ingresa tu nombre antes de continuar", "¡ALERTA!" ,JOptionPane.ERROR_MESSAGE);
         }else {
-            Processo windows = new Processo();
+            Processo windows = new Processo(txt_name.getText());
             windows.show();
             this.dispose();
         }
