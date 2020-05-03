@@ -112,7 +112,7 @@ public class Processo extends javax.swing.JFrame {
                 Btn_enviarActionPerformed(evt);
             }
         });
-        getContentPane().add(Btn_enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, -1, -1));
+        getContentPane().add(Btn_enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, -1));
 
         Siguiente.setText("Resúestas");
         Siguiente.addActionListener(new java.awt.event.ActionListener() {
