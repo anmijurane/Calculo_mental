@@ -36,75 +36,58 @@ public class index extends javax.swing.JFrame {
         Btn_exit = new javax.swing.JButton();
         Btn_start = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(400, 211));
+        setMaximumSize(new java.awt.Dimension(650, 400));
+        setMinimumSize(new java.awt.Dimension(650, 400));
+        setPreferredSize(new java.awt.Dimension(650, 400));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setText("Bienvenido, Calculo Mental");
+        jLabel1.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        jLabel1.setText("Bienvenido a la Calculadora Mental");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Ingresa tu nombre:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, -1, -1));
 
+        txt_name.setFont(new java.awt.Font("Century Schoolbook", 1, 18)); // NOI18N
         txt_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_nameActionPerformed(evt);
             }
         });
+        getContentPane().add(txt_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 250, 30));
 
+        Btn_exit.setBackground(new java.awt.Color(255, 0, 0));
+        Btn_exit.setFont(new java.awt.Font("Century Schoolbook", 1, 14)); // NOI18N
         Btn_exit.setText("Salir");
         Btn_exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_exitActionPerformed(evt);
             }
         });
+        getContentPane().add(Btn_exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 89, -1));
 
+        Btn_start.setBackground(new java.awt.Color(51, 204, 0));
+        Btn_start.setFont(new java.awt.Font("Century Schoolbook", 1, 14)); // NOI18N
         Btn_start.setText("Comenzar");
         Btn_start.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_startActionPerformed(evt);
             }
         });
+        getContentPane().add(Btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 140, 315, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(57, 57, 57)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(25, 25, 25))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(Btn_exit, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Btn_start)))
-                    .addComponent(jLabel1))
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Btn_exit)
-                    .addComponent(Btn_start))
-                .addGap(47, 47, 47))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Index.png"))); // NOI18N
+        jLabel4.setMaximumSize(new java.awt.Dimension(740, 530));
+        jLabel4.setMinimumSize(new java.awt.Dimension(740, 530));
+        jLabel4.setPreferredSize(new java.awt.Dimension(740, 530));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 380));
 
         pack();
         setLocationRelativeTo(null);
@@ -173,6 +156,7 @@ public class index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txt_name;
     // End of variables declaration//GEN-END:variables
 }

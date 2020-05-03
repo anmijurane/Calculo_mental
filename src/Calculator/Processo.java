@@ -69,68 +69,77 @@ public class Processo extends javax.swing.JFrame {
         equals = new javax.swing.JLabel();
         result_kid = new javax.swing.JTextField();
         Btn_enviar = new javax.swing.JButton();
-        Siguiente = new javax.swing.JButton();
         Etq_Name_kid = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         label_numer = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jTree1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Century Schoolbook", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Resuelve la siguiente operación:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, -1, -1));
 
-        FirstValue.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        FirstValue.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        FirstValue.setForeground(new java.awt.Color(255, 255, 255));
         FirstValue.setText("0");
-        getContentPane().add(FirstValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 25, 31));
+        getContentPane().add(FirstValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 40, 60));
 
-        Operator.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Operator.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        Operator.setForeground(new java.awt.Color(255, 255, 255));
         Operator.setText("+/-");
-        getContentPane().add(Operator, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 25, 31));
+        getContentPane().add(Operator, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 70, 80));
 
-        SecondValue.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        SecondValue.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        SecondValue.setForeground(new java.awt.Color(255, 255, 255));
         SecondValue.setText("0");
-        getContentPane().add(SecondValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 25, 31));
+        getContentPane().add(SecondValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 40, 60));
 
-        equals.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        equals.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        equals.setForeground(new java.awt.Color(255, 255, 255));
         equals.setText("=");
-        getContentPane().add(equals, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 20, 31));
+        getContentPane().add(equals, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 50, 50));
 
+        result_kid.setBackground(new java.awt.Color(82, 157, 6));
+        result_kid.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        result_kid.setForeground(new java.awt.Color(255, 255, 255));
         result_kid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 result_kidActionPerformed(evt);
             }
         });
-        getContentPane().add(result_kid, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 106, -1));
+        getContentPane().add(result_kid, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 106, 40));
 
-        Btn_enviar.setText("Verificar y Siguiente");
+        Btn_enviar.setBackground(new java.awt.Color(153, 153, 255));
+        Btn_enviar.setFont(new java.awt.Font("Century Schoolbook", 1, 14)); // NOI18N
+        Btn_enviar.setText(" Siguiente");
         Btn_enviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_enviarActionPerformed(evt);
             }
         });
-        getContentPane().add(Btn_enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, -1));
+        getContentPane().add(Btn_enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, -1, -1));
 
-        Siguiente.setText("Resúestas");
-        Siguiente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SiguienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
+        Etq_Name_kid.setFont(new java.awt.Font("Century Schoolbook", 1, 18)); // NOI18N
+        Etq_Name_kid.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(Etq_Name_kid, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 100, -1));
 
-        Etq_Name_kid.setText("NOMBRE");
-        getContentPane().add(Etq_Name_kid, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 100, -1));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 190));
-
+        label_numer.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        label_numer.setForeground(new java.awt.Color(255, 255, 255));
         label_numer.setText("1 / 10");
-        getContentPane().add(label_numer, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, -1));
+        getContentPane().add(label_numer, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Operación: ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Proceso.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 510));
 
         pack();
         setLocationRelativeTo(null);
@@ -185,18 +194,6 @@ public class Processo extends javax.swing.JFrame {
         //System.out.println("Ya no hay mas operaciones");
     }
            
-//    public int SendData(){
-//        int datosa = contCorrect;                                
-//        return datosa;
-//    }
-    
-    private void SiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SiguienteActionPerformed
-        /*        
-        Result open = new Result();
-        open.show();
-        this.dispose();*/
-    }//GEN-LAST:event_SiguienteActionPerformed
-
     private void result_kidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_result_kidActionPerformed
         
     }//GEN-LAST:event_result_kidActionPerformed
@@ -273,7 +270,6 @@ public class Processo extends javax.swing.JFrame {
     private javax.swing.JLabel FirstValue;
     private javax.swing.JLabel Operator;
     private javax.swing.JLabel SecondValue;
-    private javax.swing.JButton Siguiente;
     private javax.swing.JLabel equals;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

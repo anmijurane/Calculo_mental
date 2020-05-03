@@ -34,96 +34,58 @@ public class Result extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         aprobar_o_no = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setText("Respuestas buenas:");
+        jLabel2.setFont(new java.awt.Font("Century Schoolbook", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel2.setText("Respuestas Correctas:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel3.setText("Respuetas malas:");
+        jLabel3.setFont(new java.awt.Font("Century Schoolbook", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel3.setText("Respuetas Incorrectas:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
 
         Resp_buenas.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         Resp_buenas.setForeground(new java.awt.Color(45, 136, 45));
         Resp_buenas.setText("jLabel4");
+        getContentPane().add(Resp_buenas, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 80, 40));
 
         Resp_malas.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         Resp_malas.setForeground(new java.awt.Color(170, 108, 57));
         Resp_malas.setText("jLabel5");
+        getContentPane().add(Resp_malas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 70, 40));
 
-        Calf_txt.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        Calf_txt.setFont(new java.awt.Font("Century Schoolbook", 1, 48)); // NOI18N
         Calf_txt.setText("10");
+        getContentPane().add(Calf_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, -1, 60));
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Century Schoolbook", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(102, 102, 255));
         jLabel4.setText("Calificación");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(170, 57, 57));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("SALIR");
+        jButton1.setFont(new java.awt.Font("Century Schoolbook", 1, 14)); // NOI18N
+        jButton1.setText("Salir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, -1, -1));
 
-        aprobar_o_no.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        aprobar_o_no.setText("Felicidades, aprobaste");
+        aprobar_o_no.setFont(new java.awt.Font("Century Schoolbook", 1, 24)); // NOI18N
+        aprobar_o_no.setForeground(new java.awt.Color(51, 102, 255));
+        aprobar_o_no.setText("¡¡¡¡¡FELICIDADES TERMINASTE!!!!!");
+        getContentPane().add(aprobar_o_no, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Resp_malas)
-                            .addComponent(Resp_buenas))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(Calf_txt))
-                            .addComponent(jLabel4))
-                        .addGap(16, 16, 16))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(aprobar_o_no)
-                        .addContainerGap(91, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(35, 35, 35))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(aprobar_o_no)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(Resp_buenas, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(Resp_malas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Calf_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(31, 31, 31))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Resultado.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 450));
 
         pack();
         setLocationRelativeTo(null);
@@ -197,6 +159,7 @@ public class Result extends javax.swing.JFrame {
     private static javax.swing.JLabel Resp_malas;
     private static javax.swing.JLabel aprobar_o_no;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
